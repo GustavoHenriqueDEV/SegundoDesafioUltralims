@@ -1,38 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Sen, sans-serif ;
+
+}
+
+h1{
+    font-size: 30px;
+}
+
+button{
+            background-color: #222;
+            border-radius: 4px;
+            border-style: none;
+            box-sizing: border-box;
+            color: #fff;
+            cursor: pointer;
+            display: inline-block;
+            font-family: "Farfetch Basis", "Helvetica Neue", Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.5;
+            max-width: none;
+            min-height: 44px;
+            min-width: 10px;
+            outline: none;
+            overflow: hidden;
+            padding: 9px 20px 8px;
+            position: relative;
+            text-align: center;
+            text-transform: none;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            width: 100%;
+            margin-top: 10px;
+        }
+    
+ button-31 :hover, button-31 :focus {
+     opacity: .75;
+ }
+
 .App {
-  text-align: center;
+    text-align: center;
+    justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input {
+    margin-right: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+
+.container{
+    margin-top: 40px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.contentWrapper{
+    background-image: radial-gradient(circle at 0% 0%, #373b52, #252736 51%, #1d1e26);
+    color: #f3f3f3;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    justify-content: center;
+    padding: 10px;
+    background-color: #c3c3c3e3;
+    border: 1px solid rgba(0, 0, 0, 0.048);
+    border-radius: 20px;
+    padding: 40px;
+    height: 500px;
+}
+.consult{
+    color: #f3f3f3;
+    margin-top: 100px;
 }
 
-.App-link {
-  color: #61dafb;
+
+:root {
+    --input-background: rgba(0, 6, 27, 0.8);
+    --input-text-inactive: #00040f;
+    --input-text-active: #01050e;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input {
+    background-color: var(--input-background);
 }
+
+.input input {
+    color: var(--input-text-inactive);
+}
+
+.input input:focus {
+    color: var(--input-text-active);
+}
+
+
+.growing-search {
+    padding: 5px 5px 5px 7px;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.growing-search div {
+    display: inline-block;
+    font-size: 12px;
+}
+
+.growing-search .input input {
+    margin-right: 0;
+    border: none;
+    font-size: inherit;
+    transition: width 200ms;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    width: 55px;
+    color: #070000;
+    border-bottom: 1px solid #eee;
+}
+
+.growing-search .input input:focus {
+    width: 150px;
+}
+
+.growing-search .submit button {
+    margin-left: 0;
+    border: none;
+    font-size: 1.15em;
+    color: #aaa;
+    background-color: #fff;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    transition: color 200ms;
+}
+
+.growing-search .input input:hover,
+.growing-search .submit button:hover {
+    cursor: pointer;
+}
+
+.growing-search .input input:focus,
+.growing-search .submit button:focus {
+    outline: none;
+}
+
+.growing-search .submit button:hover {
+    color: #3498db;
+}
+
+:root {
+    --input-background: rgba(57, 63, 84, 0.8);
+    --input-text-inactive: #7881A1;
+    --input-text-active: #010614;
+}
+.citys{
+    margin-top: 30px;
+}
+
+
+.localStorage {
+    margin-left: 10px;
+    border-radius: 20px;
+    padding: 20px;
+    width: 40vh;
+    color: #f3f3f3;
+        background-image: radial-gradient(circle at 0% 0%, #373b52, #252736 51%, #1d1e26e3);
+}
+
+
+
+.webflow-style-input {
+    position: relative;
+    display: flex;
+    color: black;
+    flex-direction: row;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 2px;
+    padding: 1.4rem 2rem 1.6rem;
+    background: var(--input-background);
+}
+
+.webflow-style-input:after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 999;
+    height: 2px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    background-position: 0% 0%;
+    background: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6);
+    background-size: 500% auto;
+    animation: gradient 3s linear infinite;
+}
+
+.webflow-style-input input {
+    flex-grow: 1;
+    color: var(--input-text-active);
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    vertical-align: middle;
+}
+
+
