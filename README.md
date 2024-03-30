@@ -1,5 +1,5 @@
 ## Inicialização do Projeto
-** Este é um guia para ajudar você a iniciar e executar este projeto em sua máquina local.
+**Este é um guia para ajudar você a iniciar e executar este projeto em sua máquina local.**
 
 ## Pré-requisitos
 **Antes de começar, certifique-se de ter instalado em sua máquina:**
