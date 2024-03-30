@@ -13,7 +13,7 @@ function App() {
   const [sortBy, setSortBy] = useState(null);
   const [sortOrder, setSortOrder] = useState('asc');
 
-  // Função para consultar o CEP
+ 
   const consultarCEP = () => {
     axios.post('http://localhost:5000/consulta_cep', { cep })
       .then(response => {
@@ -22,8 +22,6 @@ function App() {
         } else {
           const newAddress = response.data;
           setAddress(newAddress);
-
-          // Armazenar o novo endereço consultado no localStorage
           const updatedAddresses = [...storedAddresses, newAddress];
           localStorage.setItem('storedAddresses', JSON.stringify(updatedAddresses));
           setStoredAddresses(updatedAddresses);
@@ -31,13 +29,9 @@ function App() {
       })
       .catch(error => console.error('Erro ao consultar CEP:', error));
   };
-
-  // Função para mostrar/ocultar o histórico de endereços
   const toggleHistory = () => {
     setShowHistory(!showHistory);
   };
-
-  // Função para ordenar os endereços armazenados
   const sortAddresses = (field) => {
     if (sortBy === field) {
       setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
@@ -46,8 +40,6 @@ function App() {
       setSortOrder('asc');
     }
   };
-
-  // Ordenar os endereços quando sortBy ou sortOrder mudar
   useEffect(() => {
     if (sortBy) {
       const sortedAddressesCopy = [...storedAddresses];
@@ -61,12 +53,11 @@ function App() {
   }, [sortBy, sortOrder, storedAddresses]);
 
   useEffect(() => {
-    // Recuperar os endereços armazenados do localStorage quando o componente for montado
     const storedAddressesFromLocalStorage = localStorage.getItem('storedAddresses');
     if (storedAddressesFromLocalStorage) {
       setStoredAddresses(JSON.parse(storedAddressesFromLocalStorage));
     }
-  }, []); // Executar apenas uma vez, quando o componente for montado
+  }, []); 
 
   return (
     <div className="App">
